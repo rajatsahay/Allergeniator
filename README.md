@@ -1,1 +1,2 @@
-Made for Team RAPR for DevJams'19 by DSC VIT
+Made by Team RAPR for DevJams'19 by DSC VIT
+Allergeniator
