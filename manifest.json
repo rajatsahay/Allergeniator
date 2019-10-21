@@ -1,0 +1,52 @@
+{
+  "manifest_version": 2,
+  "name": "Allerginator",
+  "description": "Adds a right-click menu item to images to detect text, labels and faces.",
+  "version": "0.0.9",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "clipboardWrite",
+    "contextMenus",
+    "notifications",
+    "file://*",
+    "<all_urls>"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://primenow.amazon.com/*"
+      ],
+      "js": [
+        "content1.js",
+        "content2.js",
+        "popup.js"
+      ],
+      "run_at":"document_end"
+    } 
+  ],
+  "web_accessible_resources": [
+    "exclamation-mark.png",
+    "checked-mark.png"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  // "permissions": [
+  //   "identity"
+  // ],
+  // "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+  // "oauth2": {
+  //   "client_id": "naebaipodgeodfejfpmpglkenpenlikj",
+  //   "scopes": [
+  //     "https://www.googleapis.com/auth/userinfo.email",
+  //     "https://www.googleapis.com/auth/userinfo.profile"
+  //   ]
+  // },
+  "icons": {
+    "16": "images/icon16.png",
+    "128": "images/icon128.png"
+  }
+  // "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtivrKq1TXVI4/t1mf77UUrWvKzP43+5FDQgWloH/myG7aPA0hNmjdhjQMOXD9dgBXAyRualsQZSeceMt5Dpe+/qQDv/HiWWU5LOOlK9h/hnXCDbEiaCGg2bu9YOma4SCimALAdV+ytzOwroljtjsB+ud8fBI7khjTGDJ4CSpmMiM7XCL8l4m1ckobNTD836LscmvdnTq3z014uejNZq8aWafvfHE3Gdben6UrwtgKbUxAxXn+V0G69LqAbSzlVZLK8ozb64WYUUPSHhyFubp8oJE6vxOxP86UdUK8KV4YvRsTO5LMy45djG2pvW6PYoHTUz1ZL4YVy4RyEoxVFW6EwIDAQAB"
+}
