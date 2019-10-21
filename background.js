@@ -4,10 +4,10 @@ var LINE_COLOR = '#f3f315';
 
 var allergens = ["milk", "cream", "butter", "cheese", "egg", "fish", "nut", "wheat", "soyabean", "soy", "shell", "cashew"];
 
-//var regexAllergens=[]
-//for (var i=0;i<allergens.length;i++){
-  //regexAllergens[i]=/.*allergens[i].*/i
-//}
+var regexAllergens=[]
+for (var i=0;i<allergens.length;i++){
+  regexAllergens[i]=/.*allergens[i].*/i
+}
 
 // http makes an HTTP request and calls callback with parsed JSON.
 var http = function (method, url, body, cb) {
